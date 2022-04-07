@@ -5,4 +5,9 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Hello World!")
+    meetups = [
+        {"title": "First meetup"},
+        {"title": "Second meetup"},
+        {"title": "Third meetup"},
+    ]
+    return render(request, 'meetups/index.html', {"meetups": meetups})
