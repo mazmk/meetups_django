@@ -1,0 +1,18 @@
+source ../Environments/django_meetups/bin/activate && cd ../meetups_django/
+
+
+
+
+class Meetup(models.Model):
+    title: models.CharField(max_length=200)
+    slug: models.SlugField(unique=True)
+    description: models.TextField()
+    location: models.CharField(max_length=200)
+
+
+
+
+('title', models.SlugField(unique=True)),
+                ('slug', models.CharField(max_length=200)),
+                ('description', models.TextField()),
+                ('location', models.CharField(max_length=200)),
